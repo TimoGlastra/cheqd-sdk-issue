@@ -20,7 +20,9 @@ const agent = new Agent({
 			networks: [
 				{
 					network: "testnet",
+					rpcUrl: process.env.CHEQD_RPC_URL,
 					cosmosPayerSeed:
+						process.env.CHEQD_SEED ??
 						"vacuum potato dawn manage dolphin ten enroll announce train lava brown tumble",
 				},
 			],
