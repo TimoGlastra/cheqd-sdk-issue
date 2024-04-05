@@ -19,6 +19,14 @@ CHEQD_RPC_URL=http://localhost:26657 CHEQD_SEED="sketch mountain erode window en
 
 > NOTE: resolving fails because the did doesn't exist
 
+> NOTE: adding the following resolutions to package.json, running pnpm install again, and then re-running the ts-node script (only the last one), will make it succeed, so it's something with the new version of the SDK:
+> ```
+>   "resolutions": {
+>    "@cheqd/sdk": "~2.3.0",
+>    "@cheqd/ts-proto": "~2.2.0"
+>  }
+> ```
+
 ```
 pnpm install
 docker run --rm -d --name cheqd -p 26657:26657 ghcr.io/cheqd/cheqd-testnet:latest
